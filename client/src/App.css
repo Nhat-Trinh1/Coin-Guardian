@@ -1,0 +1,111 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: rgb(35, 35, 35);
+  --text-color: grey;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  margin: 0;  /* Resetting default margin */
+  height: 100vh;  /* Ensures body takes full viewport height */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/dollar.jpg'); /* adjust the path based on where you've stored the image */
+  background-size: cover;  /* to cover the entire div */
+  background-repeat: no-repeat; /* to avoid the image repeating */
+  background-position: center; /* to center the background image */
+  height: 690px;
+  width: 500px;
+  padding: 30px;
+  position: absolute;  /* Positioning relative to its closest positioned ancestor (body in this case) */
+  top: 50%;  /* Move it down by half of the viewport height */
+  left: 50%;  /* Move it to the right by half of the viewport width */
+  transform: translate(-50%, -50%); /* Pulls the box back by half of its own width and height to center it */
+}
+
+.header {
+  margin-top: 125px;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 10px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+  padding-right: 12.5px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+.income {
+  color: green;
+}
+
+.expense {
+  color: red;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+}
+
+.goal {
+  margin-left: 20px;
+}
+
+.label1 {
+  margin-right: 49.5px;
+}
+
+.label2 {
+  margin-right: 13.5px;
+}
+
+.label3 {
+  margin-right: 52px;
+}
+
+.transaction-container {
+  max-height: 35px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  height: 100px;
+  width:200px;
+}
+
+.big-transaction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
